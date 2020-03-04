@@ -57,24 +57,28 @@ local Pentagon = display.newPolygon(display.contentWidth/2, display.contentHeigh
 Pentagon.anchorX = 0
 Pentagon.anchorY = 0
 Pentagon.x = 700
-Pentagon.y = 20
+Pentagon.y = 250
 Pentagon.width = 300
 Pentagon.height = 230
 
+-- scale
+Pentagon:scale (1, -1)
 -- name the shape and position the (x,y)
  textObjectPent = display.newText("Pentagon", 850, 270, nil, 50)
  
+ -- set the colour of the Pentagon
+local paint = {
+	type = "gradient",
+	color1 = { 255/255, 255/255, 244/255}, color2 = { 240/255, 255/255, 240/255},
+	directions = "up"
+ }
+Pentagon.fill = paint
  -- create local variable
  local verticesTrap = {-100, 100, 50, 100, 100, -50, -150, -50}
 
  --
  local Trap = display.newPolygon(display.contentWidth/2, display.contentHeight/2,verticesTrap)
 
--- set the colour of the triangle
-Pentagon:setFillColor(255/255/224)
-
--- set the colour of the triangle
-Pentagon:setStrokeColor(0,1,0)
 
 --anchor the Trapezium in the bottom right corner of the screen and set its (x,y) position
 Trap.anchorX = 0
@@ -87,6 +91,14 @@ Trap.height = 270
 -- Name the shape and position the (x,y)
  textObjectTrap = display.newText("Trapezium", 180, 450, nil, 50)
 
+-- set the colour of the Pentagon
+local paint = {
+	type = "gradient",
+	color1 = { },
+	color2 = { },
+	directions = "up"
+ }
+Pentagon.fill = paint
 -- create local variable
 local verticesParell = {-2, 6, -4, -2, 2, -2, 4, 6}
 
