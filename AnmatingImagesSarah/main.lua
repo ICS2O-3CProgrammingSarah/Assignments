@@ -13,6 +13,8 @@ scrollSpeed = 5
 -- background image with width and height
 local backgroundImage = display.newImageRect("Images/background.jpg", 2048, 1536)
 
+-- play sound throughout the whole program
+local musical_mp3 = audio.loadSound (musical_mp3)
 -- character image with width and height
 local emoji = display.newImageRect("Images/Thinking_Face_Emoji_large.png", 200, 200)
 
@@ -92,10 +94,36 @@ local function MoveShip(event)
 	emoji3.x = emoji3.x - scrollSpeed
 	-- change the transparency of the ship every time it moves so that it fades out
 	emoji3.alpha = emoji.alpha - 0.001
-	-- Make emoji3 grow
-	emoji3:scale(1.004, 1.004)
+	-- Make emoji3 spin
+
+
 end 
 
 -- Moveship will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
 
+-- character image with width and height
+local emoji4 = display.newImageRect("Images/emoji4.png", 200, 200)
+
+-- character image to be transparent
+emoji4.alpha = 1
+
+-- set the inital x and  position of emoji
+emoji4.x = 500
+emoji4.y = display.contentHeight/1.5
+
+-- Function: MoveShip
+-- Input: this function accepts an event listener
+-- Output: none
+-- Description: This function adds the scroll speed to te x-value of the ship
+local function MoveShip(event)
+	-- add the scroll speed to x-value of the ship
+	emoji4.y = emoji4.y - scrollSpeed
+	-- change the transparency of the ship every time it moves so that it fades out
+	emoji4.alpha = emoji4.alpha + 0.01
+	-- make the emoji4 grow
+	emoji4:scale(1.004, 1.004)
+
+end 
+-- Moveship will be called over and over again
+Runtime:addEventListener("enterFrame", MoveShip)
