@@ -13,8 +13,6 @@ scrollSpeed = 5
 -- background image with width and height
 local backgroundImage = display.newImageRect("Images/background.jpg", 2048, 1536)
 
--- play sound throughout the whole program
-local musical_mp3 = audio.loadSound (musical_mp3)
 -- character image with width and height
 local emoji = display.newImageRect("Images/Thinking_Face_Emoji_large.png", 200, 200)
 
@@ -96,8 +94,6 @@ local function MoveShip(event)
 	emoji3.alpha = emoji.alpha - 0.001
 	-- make emoji3 spin
 	emoji3:rotate(4)
-
-
 end 
 
 -- Moveship will be called over and over again
@@ -124,7 +120,9 @@ local function MoveShip(event)
 	emoji4.alpha = emoji4.alpha + 0.01
 	-- make the emoji4 grow
 	emoji4:scale(1.004, 1.004)
-
 end 
+
 -- Moveship will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
+
+
