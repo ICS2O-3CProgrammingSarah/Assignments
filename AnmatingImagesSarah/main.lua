@@ -94,7 +94,8 @@ local function MoveShip(event)
 	emoji3.x = emoji3.x - scrollSpeed
 	-- change the transparency of the ship every time it moves so that it fades out
 	emoji3.alpha = emoji.alpha - 0.001
-	-- Make emoji3 spin
+	-- make emoji3 spin
+	emoji3:rotate(4)
 
 
 end 
