@@ -122,6 +122,15 @@ local function MoveShip(event)
 	emoji4:scale(1.004, 1.004)
 end 
 
+--- add text to the program
+local textObject
+
+-- display text textObject
+textObject = display.newText( "Welcome to Emoji World!", 500, 500, nil, 50 )
+
+--set the colour of the text
+textObject:setTextColor(174/255, 243/255, 250/255)
+
 -- Moveship will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
 
