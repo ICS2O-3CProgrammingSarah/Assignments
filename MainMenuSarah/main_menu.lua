@@ -99,16 +99,16 @@ function scene:create( event )
     playButton = widget.newButton( 
         {   
             -- Set its position on the screen relative to the screen size
-            x = display.contentWidth/2,
+            x = display.contentWidth/1.5,
             y = display.contentHeight*7/8,
 
             --change the width and the height
-            width = 200,
-            height = 100,
+            width = 500,
+            height = 350,
 
             -- Insert the images here
-            defaultFile = "Images/Start Button Unpressed.png",
-            overFile = "Images/Start Button Pressed.png",
+            defaultFile = "Images2/PlayUnpressed.png",
+            overFile = "Images2/PlayPressed.png",
 
             -- When the button is released, call the Level1 screen transition function
             onRelease = Level1ScreenTransition          
@@ -121,15 +121,15 @@ function scene:create( event )
         {
             -- Set its position on the screen relative to the screen size
             x = display.contentWidth*7/8,
-            y = display.contentHeight*7/8,
+            y = display.contentHeight*1/8,
 
             --change the width and the height
-            width = 200,
-            height = 100,
+            width = 250,
+            height = 300,
 
             -- Insert the images here
-            defaultFile = "Images/Credits Button Unpressed.png",
-            overFile = "Images/Credits Button Pressed.png",
+            defaultFile = "Images2/CreditsUnpressed.png",
+            overFile = "Images2/CreditsPressed.png",
 
             -- When the button is released, call the Credits transition function
             onRelease = CreditsTransition
@@ -145,12 +145,12 @@ function scene:create( event )
 
             --change the width and the height
 
-            width = 250,
-            height = 100,
+            width = 700,
+            height = 400,
 
             -- Insert the images here
-            defaultFile = "Images/Instructions Button Unpressed.png",
-            overFile = "Images/Instructions Button Pressed.png",
+            defaultFile = "Images2/InstructionsUnpressed.png",
+            overFile = "Images2/InstructionsPressed.png",
 
             -- When the button is released, call the instruction transition function
             onRelease = InstructionsTransition
