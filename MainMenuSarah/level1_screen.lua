@@ -31,6 +31,11 @@ local scene = composer.newScene( sceneName )
 -- The local variables for this scene
 local bkg_image
 local backButton
+
+-------------------------------------------------------------------
+---SOUNDS 
+-------------------------------------------------------------------
+
 local level1Sound = audio.loadSound("Sounds/level1.mp3")
 local level1SoundChannel
 

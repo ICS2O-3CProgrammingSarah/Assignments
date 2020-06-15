@@ -28,6 +28,10 @@ scene = composer.newScene( sceneName ) -- This function doesn't accept a string,
 -----------------------------------------------------------------------------------------
 local bkg_image
 local backButton
+
+------------------------------------------------------------------------------------
+--SOUNDS
+------------------------------------------------------------------------------------
 local creditsSound = audio.loadSound("Sounds/creditsSound.mp3.mp3")
 local creditsSoundChannel
 
@@ -152,7 +156,7 @@ function scene:hide( event )
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
-        -- stop the sounds channel for this screen
+        -- stop the sounds channel for this screen once it goes to the next scene
         audio.stop(creditsSoundChannel)
 
     end

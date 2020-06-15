@@ -28,6 +28,10 @@ scene = composer.newScene( sceneName ) -- This function doesn't accept a string,
 -----------------------------------------------------------------------------------------
 local bkg_image
 local backButton
+
+------------------------------------------------------------------------------------
+--SOUNDS
+------------------------------------------------------------------------------------
 local instructionSound = audio.loadSound("Sounds/instructionSound.mp3")
 local instructionSoundChannel
 
